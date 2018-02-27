@@ -1,5 +1,93 @@
+@font-face {
+  font-family: 'Exo';
+  font-style: normal;
+  font-weight: 100;
+  src:
+    local('Exo'),
+    local('Exo-Thin'),
+    url(./assets/fonts/Exo/Exo-Thin.ttf) format('truetype'),
+    url(./assets/fonts/Exo/Exo-Thin.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Exo';
+  font-style: italic;
+  font-weight: 100;
+  src:
+    local('Exo'),
+    local('Exo-ThinItalic'),
+    url(./assets/fonts/Exo/Exo-ThinItalic.ttf) format('truetype'),
+    url(./assets/fonts/Exo/Exo-ThinItalic.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Exo';
+  font-style: normal;
+  font-weight: 200;
+  src:
+    local('Exo'),
+    local('Exo-Light'),
+    url(./assets/fonts/Exo/Exo-Light.ttf) format('truetype'),
+    url(./assets/fonts/Exo/Exo-Light.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Exo';
+  font-style: italic;
+  font-weight: 200;
+  src:
+    local('Exo'),
+    local('Exo-LightItalic'),
+    url(./assets/fonts/Exo/Exo-LightItalic.ttf) format('truetype'),
+    url(./assets/fonts/Exo/Exo-LightItalic.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Exo';
+  font-style: normal;
+  font-weight: 400;
+  src:
+    local('Exo'),
+    local('Exo-Medium'),
+    url(./assets/fonts/Exo/Exo-SemiBold.ttf) format('truetype'),
+    url(./assets/fonts/Exo/Exo-SemiBold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Exo';
+  font-style: italic;
+  font-weight: 400;
+  src:
+    local('Exo'),
+    local('Exo-MediumItalic'),
+    url(./assets/fonts/Exo/Exo-SemiBoldItalic.ttf) format('truetype'),
+    url(./assets/fonts/Exo/Exo-SemiBoldItalic.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Exo';
+  font-style: normal;
+  font-weight: bold;
+  src:
+    local('Exo'),
+    local('Exo-SemiBold'),
+    url(./assets/fonts/Exo/Exo-Black.ttf) format('truetype'),
+    url(./assets/fonts/Exo/Exo-Black.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Exo';
+  font-style: italic;
+  font-weight: bold;
+  src:
+    local('Exo'),
+    local('Exo-SemiBoldItalic'),
+    url(./assets/fonts/Exo/Exo-BlackItalic.ttf) format('truetype'),
+    url(./assets/fonts/Exo/Exo-BlackItalic.ttf) format('truetype');
+}
+
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: 'Exo';
 }
