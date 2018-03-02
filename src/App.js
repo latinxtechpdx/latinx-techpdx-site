@@ -1,24 +1,28 @@
 import React, { Component } from 'react';
-import logo from './assets/images/latinxtechpdx_map.png';
+import map from './assets/images/latinxtechpdx_map.png';
+import logo from './assets/images/latinxtechpdx_logo.png';
 import './App.css';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <div className="App-title">
-            {/* Testing font weight setup */}
-            <span className="Thin">Welcome </span>
-            <span className="Light">to Latinx </span>
-            <span className="Normal">Tech </span>
-            <span className="Black">PDX</span>
+        <nav className="navbar" role="navigation" aria-label="main-navigation">
+          <div className="navbar-brand">
+            <img className="nav-image" src={ map } alt="latinx tech pdx"/>
+            <div className="navbar-item nav-title">
+              <h1>LATINX TECH PDX</h1>
+            </div>
           </div>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+          <div className="navbar-menu">
+            <div className="navbar-end">
+              <a clasName="navbar-item">Home</a>
+              <a clasName="navbar-item">About</a>
+              <a clasName="navbar-item">Calendar</a>
+              <a clasName="navbar-item">Contact</a>
+            </div>
+          </div>
+        </nav>
       </div>
     );
   }
