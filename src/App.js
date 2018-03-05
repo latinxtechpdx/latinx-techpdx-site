@@ -3,10 +3,10 @@ import {Route, Switch, Link } from "react-router-dom";
 import map from './assets/images/latinxtechpdx_map.png';
 import logo from './assets/images/latinxtechpdx_logo.png';
 import './App.css';
-import Home from './pages/Home';
-import About from './pages/About';
-import Calendar from './pages/Calendar';
-import Contact from './pages/Contact';
+import Home from './Home';
+import About from './about/About';
+import Calendar from './calendar/Calendar';
+import Contact from './Contact';
 
 class App extends Component {
   render() {
