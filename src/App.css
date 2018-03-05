@@ -41,13 +41,8 @@
   width: auto;
 }
 
-.navbar-end a {
-  margin-top: 25px;
-  margin-right: 10px;
-}
-
 .navbar-item h1 {
-  font-size: 25px;
+  font-size: 30px;
 }
 
 .nav-title {

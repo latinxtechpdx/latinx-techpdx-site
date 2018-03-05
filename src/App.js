@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
+import {Route, Switch, Link } from "react-router-dom";
 import map from './assets/images/latinxtechpdx_map.png';
 import logo from './assets/images/latinxtechpdx_logo.png';
 import './App.css';
+import Home from './pages/Home';
 
 class App extends Component {
   render() {
@@ -16,13 +18,18 @@ class App extends Component {
           </div>
           <div className="navbar-menu">
             <div className="navbar-end">
-              <a clasName="navbar-item">Home</a>
-              <a clasName="navbar-item">About</a>
-              <a clasName="navbar-item">Calendar</a>
-              <a clasName="navbar-item">Contact</a>
+              <Link className="navbar-item" to="/">Home</Link>
+              <Link className="navbar-item" to='about'>About</Link>
+              <Link className="navbar-item" to='calendar'>Calendar</Link>
+              <Link className="navbar-item" to='contact'>Contact</Link>
             </div>
           </div>
         </nav>
+        <div>
+          <Switch>
+            <Route exact path="/" component={ Home } />
+          </Switch>
+        </div>
       </div>
     );
   }
