@@ -19,8 +19,8 @@ class Calendar extends Component {
             events: result
           });
         },
-      (error) => {
-        this.setState({
+        (error) => {
+          this.setState({
           isLoaded: true,
           error
         });
@@ -29,7 +29,7 @@ class Calendar extends Component {
   }
 
   render() {
-  const { error, isLoaded, items } = this.state;
+  const { error, isLoaded, events } = this.state;
   if (error) {
     return
       <div>
