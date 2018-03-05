@@ -48,3 +48,13 @@
 .nav-title {
   margin-left: -25px;
 }
+
+p {
+  font-size: 20px;
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.container {
+  margin-top: 30px;
+}
