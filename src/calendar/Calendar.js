@@ -8,10 +8,12 @@ class Calendar extends Component {
       isLoaded: false,
       events: []
     };
+  }
+
+  // Due to CORS issues the follwing fetch won't work unless you install this plug-in in chrome https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi
 
   componentDidMount() {
     fetch('http://api.meetup.com/Latinx-Tech-PDX/events')
-    // This request fails due to CORS issues. It will work in chrome if you install this plug inhttps://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi 
       .then(res => res.json())
       .then(
         (result) => {
