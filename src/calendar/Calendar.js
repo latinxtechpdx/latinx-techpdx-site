@@ -16,6 +16,7 @@ class Calendar extends Component {
       .then(
         (result) => {
           this.setState({
+            isLoaded: true,
             events: result
           });
         },
@@ -31,10 +32,7 @@ class Calendar extends Component {
   render() {
   const { error, isLoaded, events } = this.state;
   if (error) {
-    return
-      <div>
-        <h1>Woops, looks like something went wrong</h1>
-      </div>;
+    return <div>Error: {error.message}</div>;
   } else if (!isLoaded) {
      return <div>Loading...</div>;
    } else {
