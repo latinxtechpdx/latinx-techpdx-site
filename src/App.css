@@ -42,7 +42,7 @@
 }
 
 .navbar-item h1 {
-  font-size: 30px;
+  font-size: 2em;
 }
 
 .nav-title {
@@ -50,7 +50,7 @@
 }
 
 p {
-  font-size: 20px;
+  font-size: 1em;
   text-align: left;
   margin-bottom: 15px;
 }

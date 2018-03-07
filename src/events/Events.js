@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class Calendar extends Component {
+class Events extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -39,17 +39,17 @@ class Calendar extends Component {
      return <div>Loading...</div>;
    } else {
      return (
-       <ul>
-         {events.map(event => (
-           <li key={event.id}>
-             {event.name}
-           </li>
-         ))}
-       </ul>
+       events.map(event => (
+         <div key={event.id} className="column is-three-fifths is-offset-one-fifth">
+           {event.local_date}
+           {event.local_time}
+           {event.name}
+         </div>
+       ))
      );
    }
   }
 
 }
 
-export default Calendar
+export default Events
