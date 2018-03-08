@@ -56,5 +56,21 @@ p {
 }
 
 .container {
-  margin-top: 30px;
+  margin-top: 50px;
+}
+
+.sponsor-img {
+  max-width: 150px;
+  max-height: auto;
+}
+
+.slack {
+  max-width: 65px;
+  max-height: 65px;
+  margin-left: 60px;
+}
+
+.slack-text {
+  font-size: 1.5em;
+  margin-left: -60px;
 }
