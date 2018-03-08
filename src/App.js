@@ -1,24 +1,41 @@
 import React, { Component } from 'react';
-import logo from './assets/images/latinxtechpdx_map.png';
+import {Route, Switch, Link } from "react-router-dom";
+import map from './assets/images/latinxtechpdx_map.png';
+import logo from './assets/images/latinxtechpdx_logo.png';
 import './App.css';
+import Home from './pages/Home';
+import About from './pages/About';
+import Calendar from './pages/Calendar';
+import Contact from './pages/Contact';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <div className="App-title">
-            {/* Testing font weight setup */}
-            <span className="Thin">Welcome </span>
-            <span className="Light">to Latinx </span>
-            <span className="Normal">Tech </span>
-            <span className="Black">PDX</span>
+        <nav className="navbar" role="navigation" aria-label="main-navigation">
+          <div className="navbar-brand">
+            <img className="nav-image" src={ map } alt="latinx tech pdx"/>
+            <div className="navbar-item nav-title">
+              <h1>LATINX TECH PDX</h1>
+            </div>
           </div>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+          <div className="navbar-menu">
+            <div className="navbar-end">
+              <Link className="navbar-item" to="/">Home</Link>
+              <Link className="navbar-item" to="about">About</Link>
+              <Link className="navbar-item" to="calendar">Calendar</Link>
+              <Link className="navbar-item" to="contact">Contact</Link>
+            </div>
+          </div>
+        </nav>
+        <div className="container">
+          <Switch>
+            <Route exact path="/" component={ Home } />
+            <Route path="/about" component={ About } />
+            <Route path="/calendar" component={ Calendar } />
+            <Route path="/contact" component={ Contact } />
+          </Switch>
+        </div>
       </div>
     );
   }
