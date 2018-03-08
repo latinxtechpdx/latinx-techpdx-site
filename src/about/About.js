@@ -2,7 +2,7 @@ import React from 'react';
 
 const About = () => (
   <div className="columns">
-    <div className="column is-three-fifths is-offset-one-fifth">
+    <div className="column is-8 is-offset-2">
       <p>
         We come together to learn about Portland's tech field. Our meetings are to support each other as we learn the technologies involved in this fast growing industry. And to provide mentorship opportunities in order to create and promote a more diverse Portland Tech Culture.
       </p>
