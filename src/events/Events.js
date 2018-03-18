@@ -14,27 +14,27 @@ class Events extends Component {
     // use a callback script tag on the DOM to avoid
     // need for Meetup's API Key
 
-    // adds script tag on dom with a function that will populate another dom element with id=thedata
-    const s = document.createElement('script');
-    s.type = 'text/javascript';
-    s.async = true;
-    s.innerHTML = 'function receive(events) { ' +
+    // adds script tag on dom with a function that populates our <div id=thedata />
+    const script1 = document.createElement('script');
+    script1.type = 'text/javascript';
+    script1.async = true;
+    script1.innerHTML = 'function receive(events) { ' +
       'console.log("all data", events.data);' + 
-      'let name = events.data[0].name; ' +
-      'document.getElementById("thedata").innerHTML=name}';
-    document.body.appendChild(s);
+      'const nextMeetup = events.data[0]; ' +
+      'document.getElementById("nextmeetup").innerHTML=nextMeetup.name}';
+    document.body.appendChild(script1);
 
-    // adds script tag on dom with src pointing to meetup api url passing the name of the function 
-    // created above
-    const script = document.createElement("script");
-    script.src = "http://api.meetup.com/Latinx-Tech-PDX/events?callback=receive";
-    script.type = "application/javascript";
-    script.async = true;
-    document.body.appendChild(script);
+    // adds script tag on dom with src pointing to meetup api url passing the name of the 
+    // callback function created above
+    const script2 = document.createElement("script");
+    script2.src = "http://api.meetup.com/Latinx-Tech-PDX/events?callback=receive";
+    script2.type = "application/javascript";
+    script2.async = true;
+    document.body.appendChild(script2);
   }
 
   render() {
-    return (<div id="thedata"></div>);
+    return (<div id="nextmeetup"/>);
   }
 
 }
