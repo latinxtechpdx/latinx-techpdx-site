@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import {Route, Switch, Link } from "react-router-dom";
 import map from './assets/images/latinxtechpdx_map.png';
-import logo from './assets/images/latinxtechpdx_logo.png';
 import './App.css';
 import Home from './Home';
 import About from './about/About';
@@ -13,7 +12,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <nav className="navbar" role="navigation" aria-label="main-navigation">
+        <nav className="navbar" aria-label="main-navigation">
           <div className="navbar-brand">
             <img className="nav-image" src={ map } alt="latinx tech pdx"/>
             <div className="navbar-item nav-title">
