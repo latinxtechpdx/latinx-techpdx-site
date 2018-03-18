@@ -21,7 +21,8 @@ class Events extends Component {
     script1.innerHTML = 'function receive(events) { ' +
       'console.log("all data", events.data);' + 
       'const nextMeetup = events.data[0]; ' +
-      'document.getElementById("nextmeetup").innerHTML=nextMeetup.name}';
+      'document.getElementById("nextmeetup").innerHTML=nextMeetup.name; ' +
+      'document.getElementById("description").innerHTML=nextMeetup.description; }';
     document.body.appendChild(script1);
 
     // adds script tag on dom with src pointing to meetup api url passing the name of the 
@@ -34,7 +35,15 @@ class Events extends Component {
   }
 
   render() {
-    return (<div id="nextmeetup"/>);
+
+    // what do you think?
+    // loop through events here and add an offset background color to even # rows
+    return (
+      <div>
+        <div className="is-size-4" id="nextmeetup"/>
+        <div className="is-size-8" id="description"/>
+      </div>
+    );
   }
 
 }
